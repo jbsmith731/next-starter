@@ -1,0 +1,30 @@
+// sass-lint:disable space-before-colon
+
+//
+// Project Variables
+//
+
+// Colors
+$white  : #fff;
+$black  : #222222;
+$m-gray : #9d9d94;
+$gray   : #767676;
+
+// Breakpoints
+$desktop    : 1640px;
+$desktop-sm : 1388px;
+$laptop-l   : 1340px;
+$laptop     : 1240px;
+$landscape  : 1140px;
+$portrait   : 860px;
+$mobile     : 670px;
+$mobile-sm  : 360px;
+
+// Font weights
+$x-light : 200;
+$light   : 300;
+$regular : 400;
+$bold    : 700;
+
+// Easing
+$ease-out-cubic: cubic-bezier(.215, .61, .355, 1);

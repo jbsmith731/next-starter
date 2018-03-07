@@ -1,0 +1,127 @@
+$_rem-base: 16px !default;
+
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin position($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	@include position($top, $right, $bottom, $left);
+	position: absolute;
+}
+
+@mixin background-cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+}
+
+// Use these to handle hiding elements visually - but not using display none.
+// ==========================================================================
+
+@mixin visually-hidden {
+	position: absolute !important; // sass-lint:disable-line no-important
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+@mixin visually-shown($position: inherit) {
+	position: $position !important; // sass-lint:disable-line no-important
+	overflow: auto;
+	clip: auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+
+
+// Breakpoints
+// ==========================================================================
+
+@mixin screen-above($screen-size) {
+	@media screen and (min-width: $screen-size) {
+		@content;
+	}
+}
+
+@mixin screen-below($screen-size) {
+	@media screen and (max-width: ($screen-size - 1px)) {
+		@content;
+	}
+}
+
+@mixin screen-between($min-screen-size, $max-screen-size) {
+	@media screen and (min-width: $min-screen-size) and (max-width: ($max-screen-size - 1px)) {
+		@content;
+	}
+}
+
+
+
+// REM stuff
+// ==========================================================================
+@mixin rem-base($zoom: 100%) {
+	font-size: $zoom / 16px * $_rem-base;
+}
+
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+
+// Call with 1, 2, 3 or 4 parameters, \'px\' is not required but supported
+// rem(10 20 30px 40);
+// Space delimited, if you want to delimit using comma\'s, wrap it in another pair of brackets
+// rem((10, 20, 30, 40px));
+// Optionally call with a different base (eg: 8px) to calculate rem.
+// rem(16px 32px 48px, 8px);
+// If you require to comma separate your list
+// rem((16px, 32px, 48), 8px);
+
+@function convert-to-rem($value, $base-value: $_rem-base)  {
+	$value: strip-unit($value) / strip-unit($base-value) * 1rem;
+	@if ($value == 0rem) { // sass-lint:disable-line zero-unit
+		$value: 0;
+	}
+	@return $value;
+}
+
+@function rem($values, $base-value: $_rem-base) {
+	$max: length($values);
+
+	@if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+	$rem-values: ();
+	@for $i from 1 through $max {
+		$rem-values: append($rem-values, convert-to-rem(nth($values, $i), $base-value));
+	}
+	@return $rem-values;
+}
