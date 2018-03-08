@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Layout.scss"
+import s from "./Layout.scss"
 
 const Layout = (props) => (
   <div>
