@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import s from "./Layout.scss"
+// import s from './Layout.scss';
+import './Layout.scss';
 
-const Layout = (props) => (
+const Layout = props => (
   <div>
     {props.children}
   </div>
-)
+);
 
-export default Layout
+export default Layout;

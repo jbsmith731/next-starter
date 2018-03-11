@@ -1,9 +1,11 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
-  render () {
+
+  render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>Next.js Starter</title>
           <link rel="stylesheet" href="/_next/static/style.css" />
@@ -13,6 +15,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }
