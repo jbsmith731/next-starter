@@ -1,5 +1,5 @@
 {
-  "name": "custom-server-express",
+  "name": "next starter",
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
