@@ -9,7 +9,6 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@ueno/eslint-config": "^1.2.8",
     "@zeit/next-sass": "^0.1.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "express": "^4.14.0",
@@ -19,6 +18,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@ueno/eslint-config": "^1.2.8",
     "eslint": "^4.18.2"
   }
 }
