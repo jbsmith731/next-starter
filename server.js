@@ -1,23 +1,11 @@
-const express = require('express');
+// server.js
 const next = require('next');
+const routes = require('./routes');
 
-const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const app = next({ dev: process.env.NODE_ENV !== 'production' });
+const handler = routes.getRequestHandler(app);
+const express = require('express');
 
-app.prepare()
-  .then(() => {
-    const server = express();
-
-    server.get('/posts/', (req, res) => app.render(req, res, '/posts'));
-
-    server.get('/posts/:id', (req, res) => app.render(req, res, '/posts', { id: req.params.id }));
-
-    server.get('*', (req, res) => handle(req, res));
-
-    server.listen(port, (err) => {
-      if (err) throw err;
-      console.log(`> Ready on http://localhost:${port}`); // eslint-disable-line no-console
-    });
-  });
+app.prepare().then(() => {
+  express().use(handler).listen(3000);
+});
