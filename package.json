@@ -7,6 +7,7 @@
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:scss": "sass-lint -v -q",
     "lint-staged": "lint-staged"
   },
   "pre-commit": [
@@ -16,8 +17,12 @@
     "*.js": [
       "eslint --fix",
       "git add"
+    ],
+    "*.scss": [
+      "sass-lint -v -q"
     ]
   },
+  "sasslintConfig": "./.sass-lint-config.yml",
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
@@ -27,7 +32,8 @@
     "node-sass": "^4.7.2",
     "postcss-cssnext": "^3.1.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "sass-lint": "^1.12.1"
   },
   "devDependencies": {
     "@ueno/eslint-config": "^1.2.8",

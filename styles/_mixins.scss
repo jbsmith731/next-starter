@@ -23,19 +23,23 @@ $_rem-base: 16px !default;
 	background-size: cover;
 }
 
-@mixin placeholder() {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
+@mixin placeholder {
+	// sass-lint:disable-block no-vendor-prefixes
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
 }
 
 // Use these to handle hiding elements visually - but not using display none.
