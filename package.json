@@ -33,7 +33,7 @@
     "postcss-cssnext": "^3.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "superior-scss": "3.0.0-beta1"
+    "superior-scss": "3.0.0-beta3"
   },
   "devDependencies": {
     "@ueno/eslint-config": "^1.2.8",
