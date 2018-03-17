@@ -7190,6 +7190,10 @@ stylis@3.4.10:
   version "3.4.10"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.4.10.tgz#a135cab4b9ff208e327fbb5a6fde3fa991c638ee"
 
+superior-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/superior-scss/-/superior-scss-3.0.0.tgz#8a203f5852c5c1339ae657df5653edc264df7e5b"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
