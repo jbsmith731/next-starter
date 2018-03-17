@@ -7229,9 +7229,9 @@ stylis@3.4.5:
   version "3.4.5"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.4.5.tgz#d7b9595fc18e7b9c8775eca8270a9a1d3e59806e"
 
-superior-scss@3.0.0-beta3:
-  version "3.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/superior-scss/-/superior-scss-3.0.0-beta3.tgz#61e707f0f9c53d6a5558f7a7dcf28e0d884a986f"
+superior-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/superior-scss/-/superior-scss-3.0.0.tgz#8a203f5852c5c1339ae657df5653edc264df7e5b"
 
 supports-color@^2.0.0:
   version "2.0.0"
