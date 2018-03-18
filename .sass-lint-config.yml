@@ -9,6 +9,8 @@ files:
 rules:
   class-name-format:
     - 2
+    -
+      convention: pascalcase
   final-newline:
     - 0
   hex-length:
@@ -35,6 +37,13 @@ rules:
     - 2
   one-declaration-per-line:
     - 2
+  mixins-before-declarations:
+  - 1
+  -
+    exclude:
+      - screen-below
+      - screen-above
+      - screen-between
   quotes:
     - 0
   single-line-per-selector:

@@ -1,0 +1,12 @@
+@import "../../styles/helpers";
+
+.Container {
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include screen-above(768px) {
+    padding: 0;
+  }
+}

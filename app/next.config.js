@@ -6,4 +6,5 @@ module.exports = withSass({
     importLoaders: 1,
     localIdentName: 'es_[hash:base64:6]',
   },
+  useFileSystemPublicRoutes: false,
 });
