@@ -14,7 +14,7 @@ rules:
   final-newline:
     - 0
   hex-length:
-    - 0
+    - 1
   property-sort-order:
     - 0
   no-color-literals:
@@ -22,7 +22,7 @@ rules:
   indentation:
     - 0
   max-file-line-count:
-    - 1000
+    - 500
   no-ids:
     - 1
   placeholder-in-extend:
