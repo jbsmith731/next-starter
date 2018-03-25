@@ -2,5 +2,7 @@
   "presets": [
 		"next/babel"
 	],
-  "plugins": ["transform-export-extensions"]
+  "plugins": [
+    "transform-export-extensions"
+  ]
 }

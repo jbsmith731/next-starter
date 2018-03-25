@@ -9,10 +9,12 @@ files:
 rules:
   class-name-format:
     - 2
+    -
+      convention: pascalcase
   final-newline:
     - 0
   hex-length:
-    - 0
+    - 1
   property-sort-order:
     - 0
   no-color-literals:
@@ -20,7 +22,7 @@ rules:
   indentation:
     - 0
   max-file-line-count:
-    - 1000
+    - 500
   no-ids:
     - 1
   placeholder-in-extend:
@@ -35,6 +37,13 @@ rules:
     - 2
   one-declaration-per-line:
     - 2
+  mixins-before-declarations:
+  - 1
+  -
+    exclude:
+      - screen-below
+      - screen-above
+      - screen-between
   quotes:
     - 0
   single-line-per-selector:

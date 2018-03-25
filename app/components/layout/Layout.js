@@ -1,10 +1,10 @@
 import React from 'react';
 
-// import s from './Layout.scss';
-import './Layout.scss';
+import s from './Layout.scss';
+// import './Layout.scss';
 
 const Layout = props => (
-  <div>
+  <div className={s.Layout}>
     {props.children}
   </div>
 );
