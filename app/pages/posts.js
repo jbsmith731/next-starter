@@ -3,11 +3,17 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import Container from '../components/container';
 
+const hello = {
+  en: 'hello',
+  es: 'hola',
+};
+
 const SinglePost = props => (
   <Layout>
     <Container>
       <div>
         <h1>My blog post #{props.postId}</h1>
+        <div>{hello[props.lang]}</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
@@ -20,16 +26,20 @@ const SinglePost = props => (
 export default class extends Component {
 
   static getInitialProps({ query }) {
-    if (query) {
-      return { postId: query.id };
-    }
-    return {};
+    const queries = {
+      lang: query.lang ? query.lang : 'en',
+    };
 
+    if (query) {
+      queries.postId = query.id;
+    }
+    return queries;
   }
 
   render() {
+
     if (this.props.postId) {
-      return <SinglePost postId={this.props.postId} />;
+      return <SinglePost {...this.props} />;
     }
     return (
       <Layout>
