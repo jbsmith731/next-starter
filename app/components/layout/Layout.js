@@ -1,6 +1,5 @@
 import React from 'react';
-import Router from 'next/router';
-import { Link } from '../../routes';
+import { Link, Router } from '../../routes';
 
 import s from './Layout.scss';
 // import './Layout.scss';
@@ -18,7 +17,7 @@ const Layout = (props) => {
       newUrl = `/${lang + url}`;
     }
 
-    Router.push(newUrl);
+    Router.pushRoute(newUrl);
   };
 
   return (
