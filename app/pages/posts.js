@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
+import { Link } from '../routes';
 import Layout from '../components/layout';
 import Container from '../components/container';
 
@@ -9,7 +9,7 @@ const hello = {
 };
 
 const SinglePost = props => (
-  <Layout>
+  <Layout url={props.url.asPath}>
     <Container>
       <div>
         <h1>My blog post #{props.postId}</h1>
@@ -37,28 +37,33 @@ export default class extends Component {
   }
 
   render() {
+    const {
+      postId,
+      url,
+      lang,
+    } = this.props;
 
-    if (this.props.postId) {
+    if (postId) {
       return <SinglePost {...this.props} />;
     }
     return (
-      <Layout>
+      <Layout url={url.asPath}>
         <Container>
           <div>
             <h1>Blog Post Listing</h1>
             <ul>
               <li>
                 <Link
-                  href={{ pathname: '/posts', query: { id: '2' } }}
-                  as="/posts/2"
+                  route="posts"
+                  params={{ id: '2', lang }}
                 >
                   <a>post #2</a>
                 </Link>
               </li>
               <li>
                 <Link
-                  href={{ pathname: '/posts', query: { id: '10' } }}
-                  as="/posts/10"
+                  route="posts"
+                  params={{ id: '10', lang }}
                 >
                   <a>post #10</a>
                 </Link>
