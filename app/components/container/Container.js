@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import s from './Container.scss';
 
@@ -7,5 +8,9 @@ const Container = props => (
     {props.children}
   </div>
 );
+
+Container.proptTypes = {
+  children: PropTypes.node,
+};
 
 export default Container;
