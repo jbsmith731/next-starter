@@ -9,12 +9,10 @@ export default class Home extends React.Component {
 
   static async getInitialProps({ query }) {
     const call = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    const data = await call.data;
+    // only pass down first 4 blog posts
+    const data = await call.data.filter((d, index) => index < 4);
 
-    // only return first 4 posts
-    const filteredData = data.filter((d, index) => index < 4);
-
-    return { query, data: filteredData };
+    return { query, data };
   }
 
   render() {
