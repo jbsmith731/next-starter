@@ -1,35 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
+import axios from 'axios';
 import Layout from '../components/layout';
 import Container from '../components/container';
+import PostList from '../components/post-list';
 
-export default () => (
-  <Layout>
-    <Container>
-      <h1>next.js starter</h1>
-      <Link href="/posts">
-        <a>
-          All Posts
-        </a>
-      </Link>
-      <ul>
-        <li>
-          <Link
-            href={{ pathname: '/posts', query: { id: '2' } }}
-            as="/posts/2"
-          >
-            <a>post #2</a>
+export default class Home extends React.Component {
+
+  static async getInitialProps({ query }) {
+    const call = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    const data = await call.data;
+
+    // only return first 4 posts
+    const filteredData = data.filter((d, index) => index < 4);
+
+    return { query, data: filteredData };
+  }
+
+  render() {
+    // console.log(this.props.data)
+    return (
+      <Layout>
+        <Container>
+          <h1>next.js starter</h1>
+          <Link href="/posts">
+            <a>
+              All Posts
+            </a>
           </Link>
-        </li>
-        <li>
-          <Link
-            href={{ pathname: '/posts', query: { id: '10' } }}
-            as="/posts/10"
-          >
-            <a>post #10</a>
-          </Link>
-        </li>
-      </ul>
-    </Container>
-  </Layout>
-);
+          <PostList posts={this.props.data} />
+        </Container>
+      </Layout>
+    );
+  }
+}
