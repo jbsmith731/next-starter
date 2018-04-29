@@ -3,6 +3,7 @@
 		"next/babel"
 	],
   "plugins": [
-    "transform-export-extensions"
+    "transform-export-extensions",
+    "@babel/plugin-proposal-export-default-from"
   ]
 }
