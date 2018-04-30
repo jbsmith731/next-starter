@@ -19,21 +19,25 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const {
+      Component,
+      pageProps,
+      router,
+    } = this.props;
 
     return (
       <Container>
         <TransitionGroup>
           <Transition
             appear
-            onEnter={() => { console.log('onEnter'); }}
+            // onEnter={() => { console.log('onEnter'); }}
             onEntering={() => { console.log('onEntering'); }}
             onEntered={() => { console.log('onEntered'); }}
-            onExit={() => { console.log('onExit'); }}
+            // onExit={() => { console.log('onExit'); }}
             onExiting={() => { console.log('onExiting'); }}
             onExited={() => { console.log('onExited'); }}
             timeout={500}
-            key={this.props.router.route}
+            key={router.asPath}
           >
             <Component {...pageProps} />
           </Transition>
