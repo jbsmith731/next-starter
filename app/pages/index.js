@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import Container from '../components/container';
 
 export default () => (
-  <Layout>
+  <main>
     <Container>
       <h1>next.js starter</h1>
       <Link href="/posts">
@@ -31,5 +31,5 @@ export default () => (
         </li>
       </ul>
     </Container>
-  </Layout>
+  </main>
 );
