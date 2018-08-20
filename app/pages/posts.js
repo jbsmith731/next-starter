@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import Layout from '../components/layout';
 import Container from '../components/container';
 
 const SinglePost = props => (
-  <Layout>
+  <main>
     <Container>
       <div>
         <h1>My blog post #{props.postId}</h1>
@@ -14,7 +13,7 @@ const SinglePost = props => (
         </p>
       </div>
     </Container>
-  </Layout>
+  </main>
 );
 
 export default class extends Component {
@@ -32,7 +31,7 @@ export default class extends Component {
       return <SinglePost postId={this.props.postId} />;
     }
     return (
-      <Layout>
+      <main>
         <Container>
           <div>
             <h1>Blog Post Listing</h1>
@@ -56,7 +55,7 @@ export default class extends Component {
             </ul>
           </div>
         </Container>
-      </Layout>
+      </main>
     );
 
   }
