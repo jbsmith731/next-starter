@@ -135,15 +135,9 @@
   version "7.0.0-beta.42"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.42.tgz#9aa8b3e5dc72abea6b4f686712a7363cb29ea057"
 
-<<<<<<< HEAD
 "@babel/helper-plugin-utils@7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-rc.1.tgz#3e277eae59818e7d4caf4174f58a7a00d441336e"
-=======
-"@babel/helper-plugin-utils@7.0.0-beta.46":
-  version "7.0.0-beta.46"
-  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.46.tgz#f630adbd9d645d0ba2e43f4955b4ad61f44ccdf4"
->>>>>>> 2f10f9840b3ad2d022f0281dc20ea2a5c53bd528
 
 "@babel/helper-regex@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -233,21 +227,12 @@
     "@babel/helper-plugin-utils" "7.0.0-beta.42"
     "@babel/plugin-syntax-class-properties" "7.0.0-beta.42"
 
-<<<<<<< HEAD
 "@babel/plugin-proposal-export-default-from@^7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-default-from/-/plugin-proposal-export-default-from-7.0.0-rc.1.tgz#d4f5122ec1055754bc3d73a718fe74084482d659"
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-rc.1"
     "@babel/plugin-syntax-export-default-from" "7.0.0-rc.1"
-=======
-"@babel/plugin-proposal-export-default-from@^7.0.0-beta.46":
-  version "7.0.0-beta.46"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-default-from/-/plugin-proposal-export-default-from-7.0.0-beta.46.tgz#950321f024846ea1d45847c77b695fb4dbc549b9"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.46"
-    "@babel/plugin-syntax-export-default-from" "7.0.0-beta.46"
->>>>>>> 2f10f9840b3ad2d022f0281dc20ea2a5c53bd528
 
 "@babel/plugin-proposal-object-rest-spread@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -289,19 +274,11 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.42"
 
-<<<<<<< HEAD
 "@babel/plugin-syntax-export-default-from@7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-default-from/-/plugin-syntax-export-default-from-7.0.0-rc.1.tgz#1adb98b4eadb0450c6722583f5c9660914d48a1a"
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-rc.1"
-=======
-"@babel/plugin-syntax-export-default-from@7.0.0-beta.46":
-  version "7.0.0-beta.46"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-default-from/-/plugin-syntax-export-default-from-7.0.0-beta.46.tgz#88e0043c680d4ca881adeac11246ebfc6257dda4"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.46"
->>>>>>> 2f10f9840b3ad2d022f0281dc20ea2a5c53bd528
 
 "@babel/plugin-syntax-jsx@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -658,15 +635,9 @@
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@ueno/eslint-plugin-internal/-/eslint-plugin-internal-1.0.5.tgz#3b9a3c2ea3c307f6eb3d1a84bf98f064c78d391b"
 
-<<<<<<< HEAD
 "@zeit/next-css@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@zeit/next-css/-/next-css-0.2.0.tgz#35da071256397b509b86ac7726ce0f7d3593e62b"
-=======
-"@zeit/next-css@0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@zeit/next-css/-/next-css-0.1.5.tgz#e306a0ea7b0f49935632c3b154232d6a8b96f982"
->>>>>>> 2f10f9840b3ad2d022f0281dc20ea2a5c53bd528
   dependencies:
     css-loader "0.28.9"
     extract-text-webpack-plugin "3.0.2"
@@ -675,19 +646,11 @@
     ignore-loader "0.1.2"
     postcss-loader "2.0.10"
 
-<<<<<<< HEAD
 "@zeit/next-sass@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@zeit/next-sass/-/next-sass-0.2.0.tgz#dc860dbbab45b5fa010168c3a44a29cf8aa39db5"
   dependencies:
     "@zeit/next-css" "0.2.0"
-=======
-"@zeit/next-sass@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@zeit/next-sass/-/next-sass-0.1.2.tgz#cc46cc1d76b64d599edf662356e38520346968bc"
-  dependencies:
-    "@zeit/next-css" "0.1.5"
->>>>>>> 2f10f9840b3ad2d022f0281dc20ea2a5c53bd528
     extract-text-webpack-plugin "3.0.2"
     sass-loader "6.0.6"
 
@@ -3451,9 +3414,9 @@ hoek@4.x.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
 
-hoist-non-react-statics@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
+hoist-non-react-statics@2.5.5:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
 hosted-git-info@^2.1.4:
   version "2.5.0"
@@ -4849,9 +4812,9 @@ next-routes@^1.4.2:
   dependencies:
     path-to-regexp "^2.1.0"
 
-next@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/next/-/next-6.1.1.tgz#b86d6b773871cfeb189b926eb7089d12f291668e"
+next@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/next/-/next-6.1.2.tgz#216c50f7cd010cdf3339bae43687c546d9879a4f"
   dependencies:
     "@babel/core" "7.0.0-beta.42"
     "@babel/plugin-proposal-class-properties" "7.0.0-beta.42"
@@ -4877,7 +4840,7 @@ next@^6.1.1:
     fresh "0.5.2"
     friendly-errors-webpack-plugin "1.6.1"
     glob "7.1.2"
-    hoist-non-react-statics "2.5.0"
+    hoist-non-react-statics "2.5.5"
     htmlescape "1.1.1"
     http-errors "1.6.2"
     http-status "1.0.1"
