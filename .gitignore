@@ -9,3 +9,4 @@ yarn-error.log
 .next
 dist
 *.log
+out/

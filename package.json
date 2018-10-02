@@ -5,6 +5,8 @@
     "dev": "node app/server.js",
     "build": "next build ./app",
     "start": "NODE_ENV=production node app/server.js",
+    "export": "yarn pre-export && yarn build ./app && next export ./app",
+    "pre-export": "yarn lint && yarn lint:scss",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:scss": "sass-lint -v -q",
