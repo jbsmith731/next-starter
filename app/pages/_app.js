@@ -1,5 +1,6 @@
 import App, { Container as NextContainer } from 'next/app';
 import React from 'react';
+import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 
 export default class MyApp extends App {
@@ -20,6 +21,12 @@ export default class MyApp extends App {
 
     return (
       <NextContainer>
+        <Helmet
+          defaultTitle="next.js!"
+          titleTemplate="%s | Next.js Starter"
+        >
+          <title>Next.js</title>
+        </Helmet>
         <Layout>
           <Component {...pageProps} />
         </Layout>
