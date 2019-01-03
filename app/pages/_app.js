@@ -1,11 +1,9 @@
 import App, { Container as NextContainer } from 'next/app';
 import React from 'react';
-import Layout from '../components/layout';
 
 export default class MyApp extends App {
 
-  // eslint-disable-next-line no-unused-vars
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -20,9 +18,7 @@ export default class MyApp extends App {
 
     return (
       <NextContainer>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </NextContainer>
     );
   }

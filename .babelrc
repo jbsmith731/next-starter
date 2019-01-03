@@ -1,9 +1,10 @@
 {
   "presets": [
-		"next/babel"
+    "next/babel"
 	],
   "plugins": [
     "transform-export-extensions",
-    "@babel/plugin-proposal-export-default-from"
+    "@babel/plugin-proposal-export-default-from",
+    "babel-plugin-styled-components"
   ]
 }
