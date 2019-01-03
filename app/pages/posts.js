@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import { Link } from '../routes';
 import Container from '../components/container';
 
 const SinglePost = props => (
   <main>
+    <Helmet
+      title={`Post ${props.postId}`}
+      meta={[{ property: 'og:title', content: `Post ${props.postId}` }]}
+    />
     <Container>
       <div>
         <h1>My blog post #{props.postId}</h1>
@@ -18,7 +23,11 @@ const SinglePost = props => (
 
 export default class extends Component {
 
-  static getInitialProps({ query }) {
+  static getInitialProps({ query, req }) {
+    if (req) {
+      Helmet.renderStatic();
+    }
+
     if (query) {
       return { postId: query.id };
     }

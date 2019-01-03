@@ -1,6 +1,7 @@
 import App, { Container as NextContainer } from 'next/app';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import Helmet from 'react-helmet';
 
 const GlobalStyle = createGlobalStyle`
   * { box-sizing: border-box; }
@@ -30,6 +31,12 @@ export default class MyApp extends App {
 
     return (
       <NextContainer>
+        <Helmet
+          defaultTitle="next.js!"
+          titleTemplate="%s | Next.js Starter"
+        >
+          <title>Next.js</title>
+        </Helmet>
         <Component {...pageProps} />
         <GlobalStyle />
       </NextContainer>
