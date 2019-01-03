@@ -2,13 +2,16 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import Helmet from 'react-helmet';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class extends Document {
 
-  static async getInitialProps(...args) {
-    const documentProps = await super.getInitialProps(...args);
+  static async getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
 
-    return { ...documentProps, helmet: Helmet.renderStatic() };
+    return { ...page, helmet: Helmet.renderStatic(), styleTags };
   }
 
   // should render on <html>
@@ -30,13 +33,7 @@ export default class extends Document {
 
   get helmetJsx() {
     return (
-      <Helmet
-        htmlAttributes={{ lang: 'en' }}
-        meta={[
-          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-          { property: 'og:title', content: 'Hello next.js!' },
-        ]}
-      />
+      <Helmet />
     );
   }
 
@@ -46,6 +43,7 @@ export default class extends Document {
         <Head>
           {this.helmetJsx}
           {this.helmetHeadComponents}
+          {this.props.styleTags}
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

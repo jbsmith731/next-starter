@@ -1,12 +1,22 @@
 import App, { Container as NextContainer } from 'next/app';
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 import Helmet from 'react-helmet';
-import Layout from '../components/layout';
+
+const GlobalStyle = createGlobalStyle`
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'arial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+  }
+`;
 
 export default class MyApp extends App {
 
-  // eslint-disable-next-line no-unused-vars
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -27,9 +37,8 @@ export default class MyApp extends App {
         >
           <title>Next.js</title>
         </Helmet>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
+        <GlobalStyle />
       </NextContainer>
     );
   }

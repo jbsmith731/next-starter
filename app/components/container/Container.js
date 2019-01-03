@@ -1,16 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import s from './Container.scss';
-
-const Container = props => (
-  <div className={s.Container}>
-    {props.children}
-  </div>
-);
-
-Container.proptTypes = {
-  children: PropTypes.node,
-};
+const Container = styled.div`
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 20px;
+`;
 
 export default Container;
